@@ -11,7 +11,7 @@ public class ActivateProjectile : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            //Debug.Log("projectile");
+            Debug.Log("projectile");
             clone = Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
 
             //destroy bullet after 2sec

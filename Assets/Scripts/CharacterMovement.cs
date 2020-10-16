@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-
+    //variables go here
     public float speed = 5;
     public float JumpPower = 4;
     Rigidbody rb;
     CapsuleCollider col;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -25,6 +26,7 @@ public class CharacterMovement : MonoBehaviour
         float Vertical = Input.GetAxis("Vertical") * speed;
         Horizontal *= Time.deltaTime;
         Vertical *= Time.deltaTime;
+        
         //translate our character
         transform.Translate(Horizontal, 0, Vertical);
 
@@ -33,11 +35,13 @@ public class CharacterMovement : MonoBehaviour
             //add upward force to the rigid body when we press jump
             rb.AddForce(Vector3.up * JumpPower, ForceMode.Impulse);
 
-            if (Input.GetKeyDown("escape"))
-            {
-                Cursor.lockState = CursorLockMode.None;
-            }
+            
 
+        }
+
+        if (Input.GetKeyDown("escape"))
+        {
+                Cursor.lockState = CursorLockMode.None;
         }
     }
 

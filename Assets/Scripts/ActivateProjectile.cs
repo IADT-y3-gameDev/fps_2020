@@ -4,6 +4,7 @@ using UnityEngine;
 public class ActivateProjectile : MonoBehaviour
 {
     public GameObject projectile;
+    public float ttl = 2.0f;
     private GameObject clone;
 
     // Update is called once per frame
@@ -15,7 +16,7 @@ public class ActivateProjectile : MonoBehaviour
             clone = Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
 
             //destroy bullet after 2sec
-            Destroy(clone, 2.0f);
+            Destroy(clone, ttl);
         }
 
     }

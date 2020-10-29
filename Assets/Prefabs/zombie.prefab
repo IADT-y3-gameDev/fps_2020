@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 2048853460953535921}
   - component: {fileID: 2804049219095939305}
   - component: {fileID: 2048853460953535927}
+  - component: {fileID: -6713857233386610530}
+  - component: {fileID: -4078176038820145843}
   m_Layer: 0
   m_Name: zombie
   m_TagString: Untagged
@@ -117,7 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb71f7a035bd32240877a497e9849fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goal: {fileID: 0}
+  knockbackTime: 1
+  kick: 1.8
 --- !u!54 &2804049219095939305
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -148,3 +151,27 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-6713857233386610530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048853460953535920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f3d0357c465b8409538b129dc9c575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4078176038820145843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048853460953535920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5a24c026b4e184c991b347cbad8069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

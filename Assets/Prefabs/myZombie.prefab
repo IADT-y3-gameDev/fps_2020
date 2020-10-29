@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2014910359675997603}
   - component: {fileID: 6637237505549089015}
   - component: {fileID: 3625858043765807125}
+  - component: {fileID: 8243123775464498168}
   m_Layer: 0
   m_Name: myZombie
   m_TagString: Untagged
@@ -132,7 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb71f7a035bd32240877a497e9849fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goal: {fileID: 0}
+  knockbackTime: 1
+  kick: 1.8
 --- !u!54 &6637237505549089015
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -159,5 +161,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e5a24c026b4e184c991b347cbad8069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8243123775464498168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2465766746892824014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f3d0357c465b8409538b129dc9c575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

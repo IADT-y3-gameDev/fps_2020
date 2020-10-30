@@ -19,7 +19,7 @@ public class PlayerDamage : MonoBehaviour
             
             //Stores the current health and subtracts the damage value
             health = health - damage;
-            Debug.Log(health);
+            //Debug.Log(health);
             //Sets the text on our panel.
             healthPanel.text = health.ToString();
         }

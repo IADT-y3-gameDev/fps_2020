@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
-    private GameObject player;
+    
+    public float lookSensitivity = 2;
+    public float lookSmoothDamp = 0.1f;
     public float minClamp = -45;
     public float maxClamp = 45;
     [HideInInspector]
     public Vector2 rotation;
+    private GameObject player;
     private Vector2 currentLookRot;
     private Vector2 rotationV = new Vector2(0, 0);
-    public float lookSensitivity = 2;
-    public float lookSmoothDamp = 0.1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +34,7 @@ public class MouseLook : MonoBehaviour
         player.transform.RotateAround(transform.position, Vector3.up, Input.GetAxis("Mouse X") * lookSensitivity);
         //smooth the current Yrotation for looking up and down
         currentLookRot.y = Mathf.SmoothDamp(currentLookRot.y, rotation.y, ref rotationV.y, lookSmoothDamp);
-        //update the cameraX rotation based on the value generated
+        //update the cameraY rotation based on the value generated
         transform.localEulerAngles = new Vector3(-currentLookRot.y, 0, 0);
     }
 }

@@ -33,8 +33,11 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1;
         //panel.SetActive(false);
+        currentRound = 0;
         playerDamage = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDamage>();
         panelText = panel.GetComponentInChildren<Text>();
+        panelText.text = string.Format("Round {0}", currentRound+1);
+        //panelText.text = "";
         foreach (GameObject go in GameObject.FindObjectsOfType(typeof(GameObject)))
         {
             if (go.name.Contains("Spawner"))
@@ -62,15 +65,17 @@ public class GameManager : MonoBehaviour
             if (total == spawner.Count && roundsSurvived == currentRound)
             {
                 roundsSurvived++;
-                panelText.text = string.Format("Round {0} Completed!", roundsSurvived);
-                panel.SetActive(true);
+                Debug.Log(roundsSurvived);
+                panelText.text = string.Format("Round {0} Completed! /n Press Right mouse button for next wave!", roundsSurvived);
+                //panel.SetActive(true);
             }
 
             if (roundsSurvived != currentRound && Input.GetButton("Fire2"))
             {
                 currentRound = roundsSurvived;
                 RoundComplete();
-                panel.SetActive(false);
+                panelText.text = string.Format("Round {0}", currentRound+1);
+                //panel.SetActive(false);
             }
         }
         else

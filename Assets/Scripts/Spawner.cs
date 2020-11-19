@@ -32,6 +32,7 @@ public class Spawner : MonoBehaviour
     {
         GameManager.RoundComplete += ResetRound;
         ResetRound();
+        
         while (spawned < getAmount)
         {
             //Increment the amount spawned count.

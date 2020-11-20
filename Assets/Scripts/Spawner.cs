@@ -30,6 +30,7 @@ public class Spawner : MonoBehaviour
 
     public void Start()
     {
+        Debug.Log("Spawner");
         GameManager.RoundComplete += ResetRound;
         ResetRound();
         

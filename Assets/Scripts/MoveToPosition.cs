@@ -16,7 +16,9 @@ public class MoveToPosition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         goal = GameObject.FindGameObjectWithTag("Player").transform;
+        Debug.Log("moving towards" ,goal);
         agent = GetComponent<NavMeshAgent>();
 
         //set timer to the same knockback in first instance

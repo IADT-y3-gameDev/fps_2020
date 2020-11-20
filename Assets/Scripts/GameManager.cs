@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Game Manager");
         Time.timeScale = 1;
         //panel.SetActive(false);
         currentRound = 0;
@@ -66,7 +68,7 @@ public class GameManager : MonoBehaviour
             {
                 roundsSurvived++;
                 Debug.Log(roundsSurvived);
-                panelText.text = string.Format("Round {0} Completed! /n Press Right mouse button for next wave!", roundsSurvived);
+                panelText.text = string.Format("Round {0} Completed! Press Right mouse button for next wave!", roundsSurvived);
                 //panel.SetActive(true);
             }
 

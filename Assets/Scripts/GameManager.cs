@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
         
         int total = 0;
         health = playerDamage.health;
+        //player still alive
         if (health > 0)
         {
             for (int i = spawner.Count - 1; i >= 0; i--)
@@ -88,9 +89,10 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene(current.name);
             }
             else
-            {
+            {   
+                //Game Over Message.
                 panel.SetActive(true);
-                panelText.text = string.Format("Survived {0} Rounds", roundsSurvived);
+                panelText.text = string.Format("Game Over! Survived {0} Rounds", roundsSurvived);
                 Time.timeScale = 0;
             }
         }

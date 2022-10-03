@@ -9,3 +9,7 @@ These are the branches:
 2nd stage:
 - Look around
 - Adding Gravity and Jump abiility
+
+3rd stage:
+- Making a Projectile Weapon
+- Firing the Weapon

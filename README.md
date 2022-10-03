@@ -6,3 +6,7 @@ These are the branches:
 - Setting up the FPS character
 - Base Movement: CharacterMovement.cs
 
+2nd stage:
+- Adding Gravity and Jump abiility
+- Making a Projectile Weapon
+- Firing the Weapon

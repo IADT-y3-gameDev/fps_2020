@@ -6,11 +6,17 @@ public class CharacterMovement : MonoBehaviour
 {
     //variables go here
     public float speed = 5;
+    
+    public float jumpPower = 4;
+    Rigidbody rb;
+    CapsuleCollider col;
 
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        rb = GetComponent<Rigidbody>();
+        col = GetComponent<CapsuleCollider>();
  
     }
 
@@ -26,7 +32,14 @@ public class CharacterMovement : MonoBehaviour
         //translate our character
         transform.Translate(Horizontal, 0, Vertical);
         
- 
+        //test if character can jump
+        Debug.Log("hi:"+ isGrounded());
+
+        if (isGrounded() && Input.GetButtonDown("Jump")) 
+        {
+            //add upward force to the rigidbody
+            rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+        } 
 
         if (Input.GetKeyDown("escape"))
         {
@@ -34,6 +47,12 @@ public class CharacterMovement : MonoBehaviour
         }
     }
     
+    private bool isGrounded()
+    {
+        //Test that we are grounded by drawing an invisible raycast line
+        //if this hits a solid object we are grounded
+        return Physics.Raycast(transform.position, Vector3.down, col.bounds.extents.y + 0.2f);
+    }
 
 }
 

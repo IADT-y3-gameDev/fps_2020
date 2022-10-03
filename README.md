@@ -7,6 +7,5 @@ These are the branches:
 - Base Movement: CharacterMovement.cs
 
 2nd stage:
+- Look around
 - Adding Gravity and Jump abiility
-- Making a Projectile Weapon
-- Firing the Weapon

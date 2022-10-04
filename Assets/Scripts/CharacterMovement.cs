@@ -51,7 +51,8 @@ public class CharacterMovement : MonoBehaviour
     {
         //Test that we are grounded by drawing an invisible raycast line
         //if this hits a solid object we are grounded
-        return Physics.Raycast(transform.position, Vector3.down, col.bounds.extents.y + 0.2f);
+        return Physics.Raycast(transform.position, Vector3.down,
+        col.bounds.extents.y + 0.2f);
     }
 
 }

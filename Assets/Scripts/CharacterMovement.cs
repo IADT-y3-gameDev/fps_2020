@@ -5,13 +5,12 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     //variables go here
-    public float speed = 5;
+    public float speed = 15;
 
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
- 
     }
 
     // Update is called once per frame
@@ -24,6 +23,7 @@ public class CharacterMovement : MonoBehaviour
         Vertical *= Time.deltaTime;
         
         //translate our character
+        Debug.Log("Horizontal: "+ Horizontal + ".Vertical: " + Vertical); 
         transform.Translate(Horizontal, 0, Vertical);
         
  

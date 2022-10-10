@@ -33,7 +33,7 @@ public class CharacterMovement : MonoBehaviour
         transform.Translate(Horizontal, 0, Vertical);
         
         //test if character can jump
-        Debug.Log("hi:"+ isGrounded());
+        //Debug.Log("hi:"+ isGrounded());
 
         if (isGrounded() && Input.GetButtonDown("Jump")) 
         {

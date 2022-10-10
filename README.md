@@ -13,3 +13,12 @@ These are the branches:
 3rd stage:
 - Making a Projectile Weapon
 - Firing the Weapon
+
+4th Stage
+- adding enemies
+- Navmeshes
+- bullet causes damage
+- enemy receives damage/dies.
+- zombie send damage
+- player receives damage
+- Health UI panel

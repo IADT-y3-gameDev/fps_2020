@@ -22,3 +22,7 @@ These are the branches:
 - zombie send damage
 - player receives damage
 - Health UI panel
+
+5th stage
+- spawn points
+- particle effects

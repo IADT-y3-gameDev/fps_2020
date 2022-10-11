@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
     private int hitNumber;
+    public int noHits = 3;
 
     // CollisionHandler. Other is a collision object it collides with
     void OnCollisionEnter(Collision other)
@@ -14,7 +15,7 @@ public class EnemyDamage : MonoBehaviour
                 hitNumber++;
             }
 
-            if (hitNumber == 3) 
+            if (hitNumber == noHits) 
             {
                 Debug.Log("Zombie dead!");
                 Destroy(gameObject);

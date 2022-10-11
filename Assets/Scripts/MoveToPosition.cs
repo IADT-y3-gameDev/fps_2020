@@ -5,13 +5,18 @@ using UnityEngine.AI;
 
 public class MoveToPosition : MonoBehaviour
 {
-    public Transform goal;
+    private Transform goal;
     private NavMeshAgent agent;
 
     // Start is called before the first frame update
     void Start()
+    
+    
     {
-    agent = GetComponent<NavMeshAgent>();    
+        //we cannot attach GameObject Player in Inspector when spawning
+        //so we use code instead.
+        goal = GameObject.FindGameObjectWithTag("Player").transform;
+        agent = GetComponent<NavMeshAgent>();    
     }
 
     void Update() {

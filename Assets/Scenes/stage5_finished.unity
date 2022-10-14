@@ -1108,7 +1108,7 @@ GameObject:
   - component: {fileID: 643135826}
   - component: {fileID: 643135827}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: FXCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

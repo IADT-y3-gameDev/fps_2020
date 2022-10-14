@@ -6,11 +6,13 @@ public class PlayerDamage : MonoBehaviour
     public Text healthPanel;
     //Sets default health to 100
     public int health = 100;
+
     private void Start()
     {
         //Sets the health text at the start, we pass 0 as we don’t want to remove health.
         ApplyDamage(0);
     }
+    
     void ApplyDamage(int damage)
     {
         //Checks we has attached a health panel and out health is greater than 0

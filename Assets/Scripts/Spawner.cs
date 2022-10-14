@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    //variables that can be set in the Inspector    
     public GameObject spawn;
     public int amount = 1;
     public float delaySpawn = 1;
     
+
     private int getAmount;
     private float timer;
     private int spawned;
@@ -40,14 +42,16 @@ public class Spawner : MonoBehaviour
                 //Reset our timer.
                 timer = 0;
                 spawned++;
+                //cloning our enemies
                 GameObject instance = Instantiate(spawn,transform);
+                //remove the parent from the cloned enemies.
                 instance.transform.parent = null;
             }
         }
     }
 
    
-
+    //visualising the object of the Spawner
     private void OnDrawGizmos()
     {
         //Draw the wireframe mesh of what we intend to spawn in our editor.

@@ -10,7 +10,7 @@ public class SendDamage : MonoBehaviour
         {
             //If the above matches, then send a message to the other object.
             //This will also pass a value of 1 for our damage.
-            other.transform.SendMessage("ApplyDamage", 1);
+            other.transform.SendMessage("ApplyDamage", 5);
         }
     }
 }

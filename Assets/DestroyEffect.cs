@@ -8,7 +8,6 @@ public class DestroyEffect : MonoBehaviour
     private float timer;
 
 
-
     // Update is called once per frame
     void Update()
     {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Simple triggerable to activate or deactive objects it's attached to
+// Simple triggerable to activate or deactive any objects it's attached to
 // Useful for spawners etc.
 public class TargetActivator : Triggerable
 {

@@ -10,11 +10,6 @@ public class Trigger : MonoBehaviour
     public TriggerAction action = TriggerAction.Activate;
     public Triggerable[] targets;
 
-    /*[Header("Item Required To Trigger")]
-    public string requiredItemName = "";
-    public bool takeItem = false;
-    */
-
     void OnTriggerEnter (Collider other)
     {
         if (other.CompareTag("Player"))

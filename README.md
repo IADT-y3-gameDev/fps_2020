@@ -26,3 +26,8 @@ These are the branches:
 5th stage
 - spawn points
 - particle effects
+
+6th stage
+- Loadscene
+- UI
+- Enemy Waves

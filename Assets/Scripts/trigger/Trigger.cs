@@ -39,7 +39,8 @@ public class Trigger : MonoBehaviour
     void OnDrawGizmos ()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawCube(transform.position, Vector3.one * 0.5f);
+        Gizmos.DrawCube(transform.position, Vector3.one);
+        
     }
 
     //Gizmos - draws connecting to each triggerable object that gets activated. 

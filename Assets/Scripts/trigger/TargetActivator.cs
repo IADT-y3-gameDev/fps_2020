@@ -29,6 +29,7 @@ public class TargetActivator : Triggerable
             gameObject.SetActive(false);
         }
         else
+        //for toggling
         {
             gameObject.SetActive(!gameObject.activeSelf);
         }

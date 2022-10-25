@@ -5,7 +5,7 @@ public enum TriggerAction
     Trigger,
     Activate,
     Deactivate,
-    Toggle,
+    Toggle
 }
 
 public abstract class Triggerable : MonoBehaviour

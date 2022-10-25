@@ -12,15 +12,18 @@ public class Trigger : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {
+        //only trigger with player collisions
         if (other.CompareTag("Player"))
         {
            TriggerTargets();
-
         }
     }
    
     public void TriggerTargets ()
     {
+        //we are looping through the Triggerable list
+        //and activate all objects
+        
         foreach (Triggerable t in targets)
             {
                 // Check in case a target is destroyed
@@ -32,17 +35,19 @@ public class Trigger : MonoBehaviour
          
     }
 
-    //Gizmos
+    //Gizmos - draws a box for the invisible trigger
     void OnDrawGizmos ()
     {
-        Gizmos.color = Color.green;
-        Gizmos.DrawCube(transform.position, Vector3.one * 0.25f);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawCube(transform.position, Vector3.one * 0.5f);
     }
 
+    //Gizmos - draws connecting to each triggerable object that gets activated. 
+    //when selected in scene view.
     void OnDrawGizmosSelected ()
     {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireCube(transform.position, Vector3.one * 0.25f);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireCube(transform.position, Vector3.one * 0.5f);
 
         if (targets != null)
         {

@@ -18,6 +18,7 @@ public class Door : Triggerable
     
     void Awake ()
     {
+        //get RB of door
         _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.isKinematic = true;
         // Transform the offset so that it works even when the door is rotated
@@ -34,14 +35,16 @@ public class Door : Triggerable
         {
             //ternary operator same as:
             //if (_targetPosition == _endPosition) {_targetPosition = _startPosition} else {_targetPosition = _endPosition};
+
             _targetPosition = (_targetPosition == _endPosition) ? _startPosition : _endPosition; 
         }
         else
         {
             _targetPosition = (action == TriggerAction.Deactivate) ? _startPosition : _endPosition;
         }
-
-            if (_update != null)
+        
+        //starting a coroutine
+        if (_update != null)
         {
             StopCoroutine(_update);
             _update = null;
@@ -75,6 +78,17 @@ public class Door : Triggerable
         _rigidbody.MovePosition(_targetPosition);
         _update = null;
     }
+    
+    //gizmo funciton for the door. Visible in scene view
+    void OnDrawGizmosSelected() 
+    {
+        Gizmos.matrix = transform.localToWorldMatrix;
+        MeshFilter mf = GetComponent<MeshFilter>();
+        if (mf!= null) {
+            //Setting gizmos.matrix means we only need the offset here
+            Gizmos.DrawWireMesh(mf.sharedMesh, moveOffset);
+        }
+    } 
 
    
 }

@@ -15,7 +15,7 @@ public class EnemyDamage : MonoBehaviour
         //Debug.Log("Collision");
         
         //We compare the tag in the other object to the tag name we set earlier.
-        if (other.transform.CompareTag("bullet"))
+        if (other.collider.transform.CompareTag("bullet"))
         {
             //If the comparison is true, we increase the hit number.
             hitNumber++;
@@ -25,7 +25,7 @@ public class EnemyDamage : MonoBehaviour
         if (hitNumber == 3)
         {
             gameObject.SetActive(false); 
-            //Destroy(gameObject);
+         
         }
     }
 }

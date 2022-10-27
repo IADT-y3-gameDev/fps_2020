@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
         panelText = panel.GetComponentInChildren<Text>();
         panelText.text = string.Format("Round {0}", currentRound+1);
         panelText.text = "";
+        
         foreach (GameObject go in GameObject.FindObjectsOfType(typeof(GameObject)))
         {
             if (go.name.Contains("Spawner"))

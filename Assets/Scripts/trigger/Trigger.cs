@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -39,8 +39,7 @@ public class Trigger : MonoBehaviour
     void OnDrawGizmos ()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawCube(transform.position, Vector3.one);
-        
+        Gizmos.DrawCube(transform.position, Vector3.one);       
     }
 
     //Gizmos - draws connecting to each triggerable object that gets activated. 

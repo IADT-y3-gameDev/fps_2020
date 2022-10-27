@@ -4,6 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
 [RequireComponent(typeof(MeshRenderer))]
+
 public class Switch : MonoBehaviour
 {
     public TriggerAction action = TriggerAction.Trigger;
@@ -22,10 +23,11 @@ public class Switch : MonoBehaviour
         _renderer.sharedMaterial = activeMaterial;
     }
 
+
     void OnCollisionEnter (Collision collision)
     {
         //switch has not been pressed and collision object is on layer "Player"
-        if (!pressed && collision.gameObject.CompareTag("Player"))
+        if (pressed == false && collision.gameObject.CompareTag("Player"))
         {
             _renderer.sharedMaterial = inactiveMaterial;
             pressed = true;
@@ -48,11 +50,16 @@ public class Switch : MonoBehaviour
             }
         }
     }
+    //this is an example of a coroutine
 
     private IEnumerator DelayedReset() {
         yield return new WaitForSeconds(3);
         Debug.Log("3 seconds have passed since I hit switch");
-     
+        //add some lines of code here that will reset the switch
+        // so we can use it again.
+        pressed = false;
+        //reset the material
+        _renderer.sharedMaterial = activeMaterial;
     } 
 
     //Gizmo that draws lines to each item that is triggerable from 

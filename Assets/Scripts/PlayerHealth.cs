@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+
 [RequireComponent(typeof(AudioSource))]
 
 public class PlayerHealth : MonoBehaviour
@@ -16,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     private bool isActive;
     //Add an audio effect;
     public AudioClip audioClip;
+    
     private AudioSource audioSource;
 
     private void Start()

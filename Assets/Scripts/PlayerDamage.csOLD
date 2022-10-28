@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//replaced by PlayerHealth.cs script.
+
+using UnityEngine;
 using UnityEngine.UI;
 public class PlayerDamage : MonoBehaviour
 {

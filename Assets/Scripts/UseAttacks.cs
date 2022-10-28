@@ -9,6 +9,7 @@ public class UseAttacks : MonoBehaviour
     public GameObject projectile;
     public GameObject punchMesh;
     public Text ammoPanel;
+
     private bool punchActive;
 
     private void Start()
@@ -34,6 +35,7 @@ public class UseAttacks : MonoBehaviour
             }
             else
             {
+                //MeleeAttackMode
                 if (!punchActive)
                 {
                     punchActive = true;
@@ -58,7 +60,7 @@ public class UseAttacks : MonoBehaviour
             ammoPanel.text = ammoAmount.ToString();
         }
     }
-
+    //Coroutine for MeleeAttack
     IEnumerator MeleeAttack()
     {
         punchMesh.SetActive(true);

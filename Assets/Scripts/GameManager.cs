@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     private int health;
     private int roundsSurvived;
     private int currentRound;
-    private PlayerDamage playerDamage;
+    private PlayerHealth playerHealth;
     private Text panelText;
 
     public List<Spawners> spawner = new List<Spawners>();
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         panel.SetActive(false);
         currentRound = 0;
-        playerDamage = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDamage>();
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         panelText = panel.GetComponentInChildren<Text>();
         panelText.text = string.Format("Round {0}", currentRound+1);
         panelText.text = "";
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
     {   
         
         int total = 0;
-        health = playerDamage.health;
+        health = playerHealth.health;
         //player still alive
         if (health > 0)
         {

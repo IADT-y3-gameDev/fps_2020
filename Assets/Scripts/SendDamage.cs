@@ -6,6 +6,7 @@ public class SendDamage : MonoBehaviour
     void OnCollisionStay(Collision other)
     {
         //We compare the tag in the other object to the tag name we set earlier.
+         //change this  from -- other.transform.CompareTag("Player")
         if (other.collider.transform.CompareTag("Player"))
         {
             //If the above matches, then send a message to the other object.

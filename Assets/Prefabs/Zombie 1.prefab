@@ -16,9 +16,10 @@ GameObject:
   - component: {fileID: 4244355025279500189}
   - component: {fileID: 2829932685906152938}
   - component: {fileID: 6573351653642149012}
+  - component: {fileID: -3277161346412998042}
   - component: {fileID: 2923132578947321427}
   m_Layer: 0
-  m_Name: Zombie
+  m_Name: Zombie 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,6 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2007a06a46d5a9e42b213773c714d233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackTime: 1
+  kick: 1.8
 --- !u!54 &2829932685906152938
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -163,6 +166,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f44e35bac88484081369f95470b0dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3277161346412998042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4244355025279500186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ebfaec21a1a7544a2edd8a8f529d13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!114 &2923132578947321427
 MonoBehaviour:
   m_ObjectHideFlags: 0

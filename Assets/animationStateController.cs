@@ -21,6 +21,7 @@ public class animationStateController : MonoBehaviour
     void Update()
     {
         // more efficient way of ->bool isWalking = animator.GetBool("isWalking");
+        //isRunning = animator.GetBool("isRunning");
         bool isWalking = animator.GetBool(isWalkingHash);
         bool isDead = animator.GetBool(isDeadHash);
 

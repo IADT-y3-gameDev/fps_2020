@@ -20,8 +20,8 @@ public class EnemyDamageAnim : MonoBehaviour
 
    void Start() {
         animator = GetComponentInChildren<Animator>();
-         animator.SetBool("isDead", false);
-        Debug.Log(animator.GetBool("isDead"));
+        animator.SetBool("isDead", false);
+       // Debug.Log(animator.GetBool("isDead"));
         agent = GetComponent<NavMeshAgent>();  
    }
 
@@ -54,7 +54,7 @@ public class EnemyDamageAnim : MonoBehaviour
     }
 
     IEnumerator WaitToDie() {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(1f);
         gameObject.SetActive(false); 
     }
 }
